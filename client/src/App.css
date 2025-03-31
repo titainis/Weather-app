@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+} 
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  padding: 30px;
+  position: relative;
+  top: 10px;
+}
+
+.weather-app{
+  display: flex;
+  justify-content: space-between;
+  width: 950px;
+  margin: 0 auto;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.box{
+  width: 600px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid lightblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.box2 {
+  background-color: #fff;
+}
+
+
+.box h2{
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.dropdown-search{
+ width: 500px;
+}
+
+.conditions {
+  display: flex;
+  width: 600px;
+  height: 135px;
+  border-radius: 10px;
+  border: 2px solid lightblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.conditions-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.condition-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 33%;
+  padding: 10px 0;
+  position: relative;
+}
+
+.condition-item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background-color: lightblue;
+}
+
+.condition-item h3 {
+  background-color: #fff;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+}
+
+.condition-value {
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.conditions div {
+  background-color: #fff;
+  text-align: center;
+}
+
+.conditions h2, .conditions p {
+  background-color: #fff;
+}
+
+.forecast {
+  width: 600px;
+  border-radius: 10px;
+  border: 2px solid lightblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.forecast-title {
+  background-color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #555;
+  font-weight: 600;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 18%;
+  padding: 10px 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.forecast-day:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-5px);
+}
+
+.day-name, .forecast-temp, .temp-icon {
+  background-color: inherit;
+}
+
+
+
+.day-name {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.forecast-icon {
+  margin: 8px 0;
+  font-size: 24px;
+  background-color: inherit;
+}
+
+
+
+.forecast-temp {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+.most-viewed-cities {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 370px;
+  border: 2px solid lightblue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.most-viewed-cities h2 {
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightblue;
+  font-size: 22px;
+  color: #333;
+}
+
+.most-viewed-list {
+  margin-top: 20px;
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.city-list {
+  list-style: none;
+  padding: 0;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.city-item {
+  padding: 20px 15px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+  position: relative;
+}
+
+/* Styling for each rank */
+.city-item.rank-1 {
+  border-left: 6px solid #FFD700; /* Gold */
+  background-color: #FFFCF0;
+  transform: scale(1.05);
+  z-index: 3;
+}
+
+.city-item.rank-2 {
+  border-left: 6px solid #C0C0C0; /* Silver */
+  background-color: #F8F8F8;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.city-item.rank-3 {
+  border-left: 6px solid #CD7F32; /* Bronze */
+  background-color: #FAF6F2;
+  transform: scale(0.95);
+  z-index: 1;
+}
+
+.city-item:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 10px 0px;
+}
+
+.city-item:active {
+  transform: translateY(0);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.no-cities {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  background-color: #fff;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+
+.header-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightblue;
+  margin-bottom: 25px;
+}
+
+.header-with-button h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.clear-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #666;
+  padding: 5px;
+}
+
+.clear-button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.clear-button:active {
+  background-color: #d0d0d0;
+  transform: translateY(1px);
+}
+
+.weather-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  width: 600px;
+  border: 2px solid lightblue;
+  background-color: #fff;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+  margin-top: 20px;
+}
