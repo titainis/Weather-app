@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const axios = require('axios'); // You'll need to install axios
+const axios = require('axios'); 
 
 const app = express();
 
@@ -9,9 +9,9 @@ app.use(cors());
 app.use(bodyParser.json()); 
 
 const PORT = 5000;
-const API = 'a2d5b213fa0fd3c8a593b863822719db'; // Store this in environment variables for production
+const API = 'a2d5b213fa0fd3c8a593b863822719db'; 
 
-// Keep your existing endpoint
+
 app.post('/log-action', (req, res) => {
   const { city, timestamp } = req.body;
 
@@ -24,7 +24,7 @@ app.post('/log-action', (req, res) => {
   res.status(200).json({ message: 'Action logged successfully' });
 });
 
-// Add a new endpoint to search for cities
+
 app.get('/search-cities', async (req, res) => {
   const { query } = req.query;
   
@@ -51,7 +51,7 @@ app.get('/search-cities', async (req, res) => {
   }
 });
 
-// Add an endpoint to get weather data
+
 app.get('/weather/:lat/:lon', async (req, res) => {
   const { lat, lon } = req.params;
   
